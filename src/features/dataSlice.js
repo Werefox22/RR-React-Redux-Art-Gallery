@@ -24,6 +24,14 @@ export const dataSlice = createSlice({
 	}
 })
 
+export const fetchData = () => {
+	const dataThunk = async (dispatch, getState) => {
+		const state = getState()
+		console.log(state)
+	}
+	return dataThunk
+}
+
 export const { nextId, prevId, setId, setData } = dataSlice.actions
 
 export default dataSlice.reducer
