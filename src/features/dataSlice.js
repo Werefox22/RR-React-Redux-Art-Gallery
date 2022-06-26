@@ -39,12 +39,12 @@ export const dataSlice = createSlice({
 export const fetchData = () => {
 	const dataThunk = async (dispatch, getState) => {
 		const state = getState()
-		console.log(state)
+		// console.log(state)
 		const url = "https://collectionapi.metmuseum.org/public/collection/v1/objects/" + state.data.objectId
 		const res = await fetch(url)
 		const resData = await res.json()
-		console.log(url)
-		console.log(resData)
+		// console.log(url)
+		// console.log(resData)
 		dispatch(setData(resData))
 	}
 	return dataThunk

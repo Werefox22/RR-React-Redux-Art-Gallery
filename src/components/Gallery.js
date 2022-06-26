@@ -2,16 +2,18 @@ import React from "react";
 import { useSelector } from 'react-redux'
 
 function Gallery() {
-	const data = useSelector((state) => state.data.apiData)
+	const apiData = useSelector((state) => state.data.apiData)
+	const objectId = useSelector((state) => state.data.objectId)
 
 	return (
 		<div>
-			<h2>{data.title}</h2>
+			<h2>{apiData.title}</h2>
 			<img 
-				src={data.primaryImage}
-				alt={data.title}
+				src={apiData.primaryImage}
+				alt={apiData.title}
 			/>
-			<p>{data.artistDisplayName}</p>
+			<p>{apiData.artistDisplayName}</p>
+			<h6>Entry {objectId}</h6>
 		</div>
 	)
 }
