@@ -10,13 +10,22 @@ export const dataSlice = createSlice({
 	initialState,
 	reducers: {
 		nextId: (state) => {
-			return { objectId: state.objectId + 1}
+			return { 
+				objectId: state.objectId + 1,
+				apiData: state.apiData
+			}
 		},
 		prevId: (state) => {
-			return { objectId: state.objectId - 1}
+			return { 
+				objectId: state.objectId - 1,
+				apiData: state.apiData
+			}
 		},
 		setId: (state, action) => {
-			return { objectId: action.payload }
+			return { 
+				objectId: action.payload,
+				apiData: state.apiData
+			}
 		},
 		setData: (state, action) => {
 			return { 
