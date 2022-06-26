@@ -8,7 +8,7 @@ function NavButtons() {
 
 	const goToId = (e) => {
 		e.preventDefault()
-		dispatch(setId(input))
+		dispatch(setId(Number(input)))
 	}
 
 	return (
@@ -25,7 +25,7 @@ function NavButtons() {
 			<div>
 				<form onSubmit={(e) => goToId(e)}>
 					<input 
-						type="text"
+						type="number"
 						onChange={(e) => setInput(e.target.value)}
 					/>
 					<button type="submit">
