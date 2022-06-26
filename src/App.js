@@ -18,12 +18,12 @@ const mapStateToProps = (state) => ({
 function App(props) {
 	const dispatch = useDispatch()
 
-	useEffect(() => {
-		dispatch(fetchData())
-	}, [props.objectId, dispatch])
+	// useEffect(() => {
+	// 	dispatch(fetchData())
+	// }, [props.objectId, dispatch])
 
 	return (
-		<div style={{ backgroundColor: 'white', color: 'black' }} className="App">
+		<div className="App">
 			<Gallery />
 			<NavButtons />
 		</div>
