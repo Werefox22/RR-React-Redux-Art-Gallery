@@ -1,12 +1,12 @@
-import { createSlice } from "@reduxjs/toolkit/dist/createSlice"
+import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-	objectId,
-	apiData
+	objectId: 0,
+	apiData: ""
 }
 
 export const dataSlice = createSlice({
-	name: data,
+	name: 'data',
 	initialState,
 	reducers: {
 		nextId: (state) => {
@@ -23,5 +23,7 @@ export const dataSlice = createSlice({
 		}
 	}
 })
+
+export const { nextId, prevId, setId, setData } = dataSlice.actions
 
 export default dataSlice.reducer
